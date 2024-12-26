@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/admin_crm/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/admin_crm/css/all.css">
+    <link rel="stylesheet" href="/static/admin_crm/css/style.css">
+
+    <title>Website Development</title>
+    <style>
+        .register-link {
+            color: #007bff; /* Change to your desired color */
+        }
+        .register-link:hover {
+            color: #0056b3; /* Change to your desired hover color */
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+        <div class="bg-white p-4 rounded shadow-sm" style="max-width: 400px; width: 100%;">
+            <h2 class="text-center mb-4">Admin Login</h2>
+            <!-- Form -->
+            <form method="post" action="{% url 'user_login' %}">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" id="email" class="form-control" placeholder="Email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Password" name="password">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-danger">Login Now</button>
+                </div>
+            </form>
+            {% for message in messages %}
+            <p class="text-center mt-3">{{ message }}</p>
+            {% endfor %}
+            <!-- Registration Link -->
+            {% comment %} <div class="text-center mt-3">
+                <a href="{% url 'register_view' %}" class="register-link">Don't have an account? Register here</a>
+            </div> {% endcomment %}
+        </div>
+    </div>
+</body>
+</html>

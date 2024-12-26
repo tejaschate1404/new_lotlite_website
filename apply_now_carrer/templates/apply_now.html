@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Lotlite Technology - IT solutions & Services || job Description</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="/static/css/flaticon.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/css/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .job-heading {
+            color: blue;
+            margin-top: 20px;
+        }
+        .job-description {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .form-section {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            margin-top: 20px;
+        }
+        .container {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .input-group-text {
+            padding: 10px 15px;
+        }
+        .form-control {
+            padding: 10px;
+        }
+        .form-control-file {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"><div class="custom-loader"></div></div>
+
+        <!-- main header -->
+        {% include "header.html" %}  
+
+        <div class="container">
+            <!-- Job Profile Heading -->
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="job-heading text-left" style="font-size: 42px !important;">{{ job.title }}</h1>
+                </div>
+            </div>
+
+            <!-- Job Description -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="job-description">
+                        <h3>Job Description</h3>
+                        <p>{{job.description}}</p>
+                        <h4>Job Type:</h4>
+                        <p>{{job.job_type}}</p>
+                        <h4>Lotlite Technology at a glance</h4>
+                        <p>Team of &gt;10-99 people</p>
+                        <p>Located in Pune, Maharastra, India</p>
+                        <h4>About Lotlite Technology</h4>
+                        <p>Lotlite PropTech, located in Hinjewadi, is a real estate company that provides hassle-free real estate buy sale rent lease and investment solution services. As a trusted partner to buyers, sellers, and renters, we help our clients achieve their real estate goals through our cutting-edge technology and personalized approach with deep understanding and long year experience from the same industry . We specialize in working with clients in the residential, commercial and corporate space and offer unparalleled expertise in navigating the complex regulations and requirements associated with real estate resale, new project, new launch, under construction, sustenance project in buying, selling, leasing, documentation process and legal finishing in terms of start to finish with wholistic approach.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Form -->
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="form-section mb-4">
+                        <h3>Apply for this job</h3>
+                        {% if messages %}
+                        <div class="alert alert-success">
+                            {% for message in messages %}
+                            <p>{{ message }}</p>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <form id="job-application-form" method="post" action="/apply_nowData/" enctype="multipart/form-data">
+                            {% comment %} {% csrf_token %} {% endcomment %}
+                            <div class="form-group">
+                                <label for="resume">Upload resume *</label>
+                                <input type="file" class="form-control-file" id="resume" name="resume" required>
+                                <small class="form-text text-muted">This will auto-fill the fields below. 10MB max file size.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" class="form-control" id="first-name" name="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" class="form-control" id="last-name" name="lastname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile-phone">Mobile Phone *</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">+91</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="mobile-phone" name="mobilephone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="experience">Experience *</label>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="number" class="form-control" id="experience-years" name="experienceyears" placeholder="Years" required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" id="experience-months" name="experiencemonths" placeholder="Months" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="current-salary">Current Salary *</label>
+                                <input type="number" class="form-control" id="current-salary" name="currentsalary" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="expected-salary">Expected Salary *</label>
+                                <input type="number" class="form-control" id="expected-salary" name="expectedsalary" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="available-to-join">Available To Join (in days) *</label>
+                                <input type="number" class="form-control" id="available-to-join" name="available_to_join" required>
+                            </div>
+                            <div class="form-group form-check mt-3">
+                                <input type="checkbox" class="form-check-input" id="privacy-policy" name="privacy_policy" required>
+                                <label class="form-check-label" for="privacy-policy">
+                                    <span class="ml-2">By applying, you hereby accept the data processing terms under the <a href="/privacy-policy" target="_blank">Privacy Policy</a> and give consent to the processing of your data as part of this job application.</span>
+                                </label>
+                            </div>
+                            
+                            <div class="container">
+                                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS and dependencies -->
+        {% include "footer.html" %} 
+        <!-- footer area end -->
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span class="fas fa-angle-double-up"></span></button>
+    </div>
+    <!--End pagewrapper-->
+
+    <!-- Jquery -->
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Custom script -->
+    <script src="/static/js/script.js"></script>
+    <script>
+        document.getElementById('job-application-form').addEventListener('submit', function(event) {
+            // Prevent form submission
+            event.preventDefault();
+    
+            // Get form elements
+            var firstName = document.getElementById('first-name').value.trim();
+            var lastName = document.getElementById('last-name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var mobilePhone = document.getElementById('mobile-phone').value.trim();
+            var experienceYears = document.getElementById('experience-years').value.trim();
+            var experienceMonths = document.getElementById('experience-months').value.trim();
+            var currentSalary = document.getElementById('current-salary').value.trim();
+            var expectedSalary = document.getElementById('expected-salary').value.trim();
+            var availableToJoin = document.getElementById('available-to-join').value.trim();
+            var resume = document.getElementById('resume').value;
+            var privacyPolicy = document.getElementById('privacy-policy').checked;
+    
+            // Validation checks
+            if (!firstName || !lastName || !email || !mobilePhone || !experienceYears || 
+                !experienceMonths || !currentSalary || !expectedSalary || !availableToJoin || 
+                !resume || !privacyPolicy) {
+                alert('Please fill in all the required fields.');
+                return;
+            }
+    
+            // Email format check
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+    
+            // Mobile phone format check (assuming 10 digits)
+            var phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(mobilePhone)) {
+                alert('Please enter a valid 10-digit mobile phone number.');
+                return;
+            }
+    
+            // Ensure experience is not negative
+            if (parseInt(experienceYears) < 0 || parseInt(experienceMonths) < 0) {
+                alert('Experience cannot be negative.');
+                return;
+            }
+    
+            // Ensure salaries are not negative
+            if (parseInt(currentSalary) < 0 || parseInt(expectedSalary) < 0) {
+                alert('Salary cannot be negative.');
+                return;
+            }
+    
+            // If all checks pass, submit the form
+            this.submit();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Lotlite - IT solutions & Services || Services Page</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="/static/css/flaticon.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/css/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="/static/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="/static/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="/static/css/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="/static/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <style>
+        .truncate {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* Number of lines to show */
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            max-height: 3.6em;
+            /* Adjust based on font size and line height */
+        }
+        .hero-content-two h1 {
+           margin-left: 40px;
+           text-align: left;
+        }
+        .hero-content-two a {
+           margin-left: 40px;
+           text-align: left;
+        }
+        
+        .hero-content-two spam  {
+           margin-left: 40px;
+           text-align: left;
+        }
+
+        .feature-item {
+    background-color: #f9f9f9; /* Optional background color for visibility */
+    border: 1px solid #ddd; /* Optional border for structure */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add padding inside the box */
+    text-align: center; /* Center content */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-item:hover {
+    background-color: #e8f4ff; /* Light blue background on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.feature-item .icon {
+    font-size: 40px; /* Size of the icon */
+    margin-bottom: 10px; /* Space below the icon */
+    color: #007BFF; /* Icon color */
+}
+
+.feature-item h5 {
+    font-size: 18px;
+    margin: 0;
+    color: #333; /* Text color */
+}
+
+.feature-item h5 a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the h5 color */
+}
+
+.feature-item h5 a:hover {
+    color: #0056b3; /* Slightly darker blue on hover */
+}
+
+        /* best from us */
+ {% comment %} /* Grid container styles */
+.grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    gap: 20px; /* Space between grid items */
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #f9f9f9;
+}
+
+/* Grid item styles */
+.grid-item1 {
+    background-color: #007BFF; /* Blue background */ 
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+} 
+
+/* Hover effect */
+ .grid-item1:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: translateY(-10px); /* Moves up */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+} 
+
+ /* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .grid-container1 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container1 {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+}  {% endcomment %}
+
+/* Inti Univercity css start */
+/* Container Styling */
+.brackets-container {
+    display: flex;
+    justify-content: center; /* Centers the brackets horizontally */
+    gap: 30px; /* Space between brackets */
+    margin: 20px auto; /* Center the container with margin */
+    max-width: 80%; /* Restrict the maximum width */
+}
+
+/* Individual Bracket Styling */
+.bracket {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    width: 250px; /* Set fixed width for consistency */
+    {% comment %} border: 2px solid #007BFF; /* Add a blue border */ {% endcomment %}
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9; /* Light background */
+}
+
+/* Icon Styling */
+.bracket .icon {
+    font-size: 40px; /* Large icon size */
+    color: #6e08a1; /* Icon color */
+    margin-bottom: 15px; /* Space below the icon */
+}
+
+/* Heading Styling */
+.bracket h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Description Styling */
+.bracket p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.bracket:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    background-color: #e8f4ff; /* Light blue background on hover */
+}
+
+.section-title h3 {
+    padding-left:60px;
+}
+
+
+/* Inti Univercity css start*/
+/* Hero caurosel button model feature */
+/* Feature Item Styles */
+.feature-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-item .icon i {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Full-Page Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    {% comment %} background: rgba(0, 0, 0, 0.9); {% endcomment %}
+    color: #fff;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay-content {
+    {% comment %} background: rgba(255, 255, 255, 0.1); {% endcomment %}
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.overlay-content p {
+    font-size: 1.2rem;
+}
+
+.overlay-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.overlay-content button:hover {
+    background-color: #0056b3;
+}
+
+
+    
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="custom-loader"></div>
+        </div>
+
+        <!-- main header -->
+        {% include "header.html" %}
+
+
+        <!--============================  Hero Carousel Start Here ====================================== -->
+        {% comment %} <section class="hero-area-two bgs-cover" style="background-image: url({% static 'images/studentMobility/studentmobilityBack.jpg' %});">
+            <div class="container mx-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="hero-content-two pt-155 pb-160 rpt-115 rpb-65 wow fadeInUp delay-0-4s">
+                            <span class="sub-title"> Lotlite Technology</span>
+                            <h1>Students 
+                            <br>
+                            Mobility
+                            <br>
+                            Programme
+                            </h1>
+                            <a href="about.html" class="theme-btn mt-25 wow fadeInUp delay-0-6s">Let’s Get Started <i class="fas fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                  
+                </div>
+                
+            </div>
+                    <div class="row justify-content-center mt-4">
+                        <!-- First Column -->
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6 col-small p-2">
+                            <div class="feature-item wow fadeInUp delay-0-2s" onclick="openOverlay('Cultural Immersion', 'Explore diverse cultures and traditions to enrich your global perspective.')">
+                                <div class="icon"><i class="flaticon-consulting"></i></div>
+                                <h5><a href="#">Cultural <br> Immersion</a></h5>
+                            </div>
+                        </div>
+                        <!-- Second Column -->
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6 col-small p-2">
+                            <div class="feature-item wow fadeInDown delay-0-2s" onclick="openOverlay('Academic Excellence', 'Achieve outstanding educational outcomes with expert guidance.')">
+                                <div class="icon"><i class="flaticon-project-management"></i></div>
+                                <h5><a href="#">Academic <br> Excellence</a></h5>
+                            </div>
+                        </div>
+                        <!-- Third Column -->
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6 col-small p-2">
+                            <div class="feature-item wow fadeInUp delay-0-2s" onclick="openOverlay('Global Connections', 'Build networks and collaborations with peers worldwide.')">
+                                <div class="icon"><i class="flaticon-ui"></i></div>
+                                <h5><a href="#">Global <br> Connections</a></h5>
+                            </div>
+                        </div>
+                        <!-- Fourth Column -->
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-6 col-small p-2">
+                            <div class="feature-item wow fadeInDown delay-0-2s" onclick="openOverlay('Seamless Integration', 'Ensure smooth and hassle-free transitions across systems and processes.')">
+                                <div class="icon"><i class="flaticon-coding-1"></i></div>
+                                <h5><a href="#">Seamless <br> Integration</a></h5>
+                            </div>
+                        </div>
+                   </div>
+
+<!-- Full-Page Overlay -->
+<div id="fullPageOverlay" class="overlay">
+    <div class="overlay-content">
+        <h2 id="overlayTitle"></h2>
+        <p id="overlayText"></p>
+        <button onclick="closeOverlay()">Close</button>
+    </div>
+</div>
+
+</div>
+
+
+          
+        </section> {% endcomment %}
+   
+
+        <!-- Hero Carousel End Here =================================== -->
+
+
+
+        <!-- Slider Section Start -->
+        <section class="slider-area bgs-cover pt-185 pb-160" style="background-image: url({% static 'images/studentMobility/studentmobilityBack.jpg' %});">
+            <div class="container">
+                <div class="main-slider-active">
+                    <div class="slider-item">
+                        <div class="slide-content text-white">
+                            <span class="sub-title">IT Solution Comapny</span>
+                            
+                            <h1>Student Mobility Program</h1>
+                            <a href="about.html" class="theme-btn">Let’s Get Started <i class="fas fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="slide-content text-white">
+                            <span class="sub-title">IT Solution Comapny</span>
+                            <span class="h2">We’re Digital</span>
+                            <h1>IT Services Agency</h1>
+                            <a href="about.html" class="theme-btn">Let’s Get Started <i class="fas fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Slider Section End -->
+          <!-- Feature Area Start -->
+        <section class="feature-area-two rel z-1">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="feature-item style-two mt-25 wow fadeInUp delay-0-2s">
+                            <div class="icon"><i class="flaticon-trust"></i></div>
+                            <h4><a href="service-details.html">Cultural Immersion</a></h4>
+                            <p>With over 20 year of experience 850+ employees flexion</p>
+                            <a class="more-btn" href="service-details.html"><i class="far fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="feature-item style-two wow fadeInDown delay-0-2s">
+                            <div class="icon"><i class="flaticon-technical-support"></i></div>
+                            <h4><a href="service-details.html">Academic Excellence</a></h4>
+                            <p>With over 20 year of experience 850+ employees flexion</p>
+                            <a class="more-btn" href="service-details.html"><i class="far fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="feature-item style-two mt-45 wow fadeInUp delay-0-2s">
+                            <div class="icon"><i class="flaticon-social-media"></i></div>
+                            <h4><a href="service-details.html">Global Connections</a></h4>
+                            <p>With over 20 year of experience 850+ employees flexion</p>
+                            <a class="more-btn" href="service-details.html"><i class="far fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="feature-item style-two mt-25 wow fadeInDown delay-0-2s">
+                            <div class="icon"><i class="flaticon-brainstorming"></i></div>
+                            <h4><a href="service-details.html">Seamless <br> Integration<</a></h4>
+                            <p>With over 20 year of experience 850+ employees flexion</p>
+                            <a class="more-btn" href="service-details.html"><i class="far fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Feature Area End -->
+          
+
+
+        <!-- INTI university start =================================== -->
+         <section class="about-area-two  py-60 rpy-50 rel z-1">
+            <div class="container">
+                <div class="row align-items-center gap-90">
+                    <div class="col-lg-6">
+                        <div class="about-two-image rel z-1 rmb-65 wow fadeInRight delay-0-2s">
+                            <img src="{% static 'images/studentMobility/intiImage.jpeg'  %}" alt="About">
+                            <div class="bg-circle-shape"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content rel z-1 wow fadeInLeft delay-0-2s">
+                            <div class="section-title mb-30">
+                               
+                                <h3>Shaping Global Talent, 
+                                    <br>
+                                    Affordable Excellence,
+                                    <br>
+                                    Dynamic Learning,
+                                    <br>
+                                    Environment
+                                </h3>
+                            </div>
+                            <div class="brackets-container">
+                                <div class="bracket">
+                                    <div class="icon">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <h3>Award-Winning
+                                        <br>
+                                        Institution
+                                    </h3>
+                                    <p>With a legay of academic excellence and innovation, INTI International University stands as a leaderin higher.</p>
+                                </div>
+                                <div class="bracket">
+                                    <div class="icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <h3> Global Opportunities & 
+                                        <br>
+                                        Cultural Exchange
+                                    </h3>
+                                    <p>At INTI, we connect students with international experiences, diverse culture, and global career</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- INTI university end ===================================== -->
+
+
+        
+
+
+       
+
+
+        <!-- What We Provide Area Start -->
+        <section class="what-we-provide overflow-hidden  rel z-1">
+            <div class="container">
+                <div class="section-title text-center mb-55 wow fadeInUp delay-0-2s">
+                    <span class="sub-title mb-10">benifits of </span>
+                    <h2>Students Mobility Programme</h2>
+                </div>
+                <div class="service-three-slider">
+
+                    {% for course in courses %}
+                    <div class="service-item-three wow fadeInUp delay-0-2s">
+                        <div class="image">
+                            <img src="{{ course.background_photo.url }}" alt="Service">
+                        </div>
+                        <div class="content">
+                            <div class="top-part">
+                                <div class="icon"><i class="flaticon-coding-1"></i></div>
+                                <h4>{{ course.title }}</h4>
+                            </div>
+                            <div class="bottom-part">
+                                <p class="truncate">{{ course.description|truncatewords:20 }}
+                                </p>
+                            <a href="{% url 'student_mobility_course_detail' course_id=course.id %}" class="read-more">Read More <i class="far fa-arrow-right"></i>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </div>
+
+            </div>
+            <div class="about-bg-shape">
+                <img src="/static/images/background/what-we-provide.png" alt="Shape">
+            </div>
+        </section>
+
+        <!-- ================== our rules start ===================================================-->
+          <!-- Services Area Three start -->
+        <section class="services-area-three overflow-hidden pt-30 rpt-20 pb-100 rpb-70 rel z-1">
+            <div class="container">
+                <div class="row gap-100 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="services-content-three mb-30 rmb-65 wow fadeInUp delay-0-2s">
+                            <div class="section-title mb-30">
+                                <span class="sub-title mb-15">Amazing Opportunities</span>
+                                <h2>We Provide Best Cultural and Academic Immersion Experience</h2>
+                            </div>
+                            <p> Immerse yourself in a unique blend o education and culture exploration through the Student Mobility Programme, designed to broaden horizons and faster global connections</p>
+                            <ul class="list-style-one pt-5">
+                                <li>Seamless academic Integration transfer credits easily to your home university</li>
+                                <li>Project-Based Learning Apply theretical knowledge to real-world challenges.</li>
+                                <li>Cultural Excursions Explore iconic landmarks ad immerse in Malaysian traditions.</li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item style-two mt-25 wow fadeInUp delay-0-2s">
+                                    <div class="icon"><i class="flaticon-trust"></i></div>
+                                    <a href="service-details.html"><h4>3-Week In-Person Program</h4></a>
+                                    <p>Engage in academic courses and explore vibrant Malaysian culture.</p>
+                                    
+                                </div>
+                                <div class="feature-item style-two wow fadeInUp delay-0-2s">
+                                    <div class="icon"><i class="flaticon-social-media"></i></div>
+                                    <a href="service-details.html"><h4>Weekend Excursions</h4></a>
+                                    <p>Visit landmarks like the Petronas Twin Towers,Melaka,and more.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item style-two wow fadeInDown delay-0-2s">
+                                    <div class="icon"><i class="flaticon-technical-support"></i></div>
+                                    <a href="service-details.html"><h4>8-Week Online Learning</h4></a>
+                                    <p>Continue your journey with expert.</p>
+                                    
+                                </div>
+                                <div class="feature-item style-two mt-25 wow fadeInDown delay-0-2s">
+                                    <div class="icon"><i class="flaticon-brainstorming"></i></div>
+                                    <a href="service-details.html"><h4>Modern Hostel Accommodations</h4></a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="servcies-bg-shape">
+                <img src="assets/images/shapes/services-bg-shape.png" alt="Shape">
+            </div>
+        </section>
+        
+        <!-- =================== our rules end ======================================================== -->
+       
+
+ <!--============================== Contact Us ================================= -->
+<section class="contact-page-form pb-130 rpb-100">
+            <div class="container">
+                <div class="contact-form-wrap form-style-two bgc-lighter wow fadeInUp delay-0-2s">
+                    <div class="row text-center mb-35 justify-content-center">
+                        <div class="col-xl-9 col-lg-11">
+                            <div class="section-title mb-25 wow fadeInUp delay-0-2s">
+                                <span class="sub-title mb-15">Get In Touch</span>
+                                <h2>Send Us  Message</h2>
+                            </div>
+                            <p>Sed ut perspiciatis unde omnis natus errorsit voluptatem accusantium doloremque laudantium aperiam eaque quae abillo inventore veritatis quasi architecto beatae vitae dicta sunt explicabo</p>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="contactForm" action="assets/php/form-process.php" name="contactForm" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" class="form-control" value="" placeholder="Full name" required data-error="Please enter your name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="phone_number" name="phone_number" class="form-control" value="" placeholder="Phone Number" required data-error="Please enter your Phone Number">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control" value="" placeholder="Email Address" required data-error="Please enter your Email">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="subject" name="subject" class="form-control" value="" placeholder="Subject" required data-error="Please enter your Subject">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="message" id="message" class="form-control" rows="3" placeholder="Message" required data-error="Please enter your Message"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group text-center mb-0">
+                                    <button type="submit" class="theme-btn style-two">send message <i class="far fa-long-arrow-right"></i></button>
+                                    <div id="msgSubmit" class="hidden"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form End -->
+        
+
+
+        <!-- footer area start -->
+        {% include "footer.html" %}
+        <!-- footer area end -->
+
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span
+                class="fas fa-angle-double-up"></span></button>
+
+    </div>
+    <!--End pagewrapper-->
+
+
+    <!-- Jquery -->
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Appear Js -->
+    <script src="/static/js/appear.min.js"></script>
+    <!-- Slick -->
+    <script src="/static/js/slick.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <!-- Nice Select -->
+    <script src="/static/js/jquery.nice-select.min.js"></script>
+    <!-- Image Loader -->
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <!-- Circle Progress -->
+    <script src="/static/js/circle-progress.min.js"></script>
+    <!-- Isotope -->
+    <script src="/static/js/isotope.pkgd.min.js"></script>
+    <!--  WOW Animation -->
+    <script src="/static/js/wow.min.js"></script>
+    <!-- Custom script -->
+    <script src="/static/js/script.js"></script>
+
+    <script>
+        function toggleContent(button) {
+            var paragraph = button.previousElementSibling;
+            var isTruncated = paragraph.classList.contains('truncate');
+
+            if (isTruncated) {
+                paragraph.classList.remove('truncate');
+                button.innerHTML = 'Read Less <i class="far fa-arrow-right"></i>';
+            } else {
+                paragraph.classList.add('truncate');
+                button.innerHTML = 'Read More <i class="far fa-arrow-right"></i>';
+            }
+        }
+
+
+                // Open Overlay Function
+        function openOverlay(title, text) {
+            document.getElementById('overlayTitle').innerText = title;
+            document.getElementById('overlayText').innerText = text;
+            document.getElementById('fullPageOverlay').style.display = 'flex';
+        }
+
+        // Close Overlay Function
+        function closeOverlay() {
+            document.getElementById('fullPageOverlay').style.display = 'none';
+        }
+
+    </script>
+
+</body>
+
+</html>

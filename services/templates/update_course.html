@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/crm/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="/static/crm/css/dataTables.bootstrap5.min.css" />
+  <link rel="stylesheet" href="/static/crm/css/style.css" />
+  <title>Update {{ course.title }}</title>
+</head>
+
+<body>
+  {% include "navbar_crm.html" %}
+  <main class="mt-5 pt-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <h4>Update Student Mobility Course</h4>
+        </div>
+        <div class="col-md-12">
+          <div class="card">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="card-header">Update Course: {{ course.title }}</div>
+              <button type="button" class="btn btn-secondary btn-dark">
+                <a href="/view-student-mobility" class="text-white text-decoration-none">View Student Mobility</a>
+              </button>
+            </div>
+
+            <div class="card-body">
+              <form action="/update_course/{{ course.id }}/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <!-- Form fields -->
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Upload a background photo</label>
+                  <div class="col-sm-4">
+                    <input type="file" class="form-control" name="background_photo" accept="image/*" />
+                    <small>Current Image: <img src="{{ course.background_photo.url }}" width="100" alt="Image 1" /></small>
+                  </div>
+                  <label class="col-sm-2 col-form-label fw-bold">Title</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" name="title" value="{{ course.title }}" required />
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Title Heading Details</label>
+                  <div class="col-sm-4">
+                    <textarea class="form-control" rows="3" name="title_heading_details" required>{{ course.title_heading_details }}</textarea>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" rows="3" name="description" required>{{ course.description }}</textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Courses Included</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" rows="3" name="courses_included" required>{{ course.courses_included }}</textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Course Contents</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" rows="3" name="course_contents" required>{{ course.course_contents }}</textarea>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Course Trainer</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="course_trainer" value="{{ course.course_trainer }}" required />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Course Start Date</label>
+                  <div class="col-sm-10">
+                    <input type="date" class="form-control" name="start_date" value="{{ course.start_date }}" required />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Course Duration</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="duration" value="{{ course.duration }}" required />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Price</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" name="price" value="{{ course.price }}" required />
+                  </div>
+                </div>
+
+                <!-- Image Fields -->
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Image 1</label>
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control" name="image1" accept="image/*" />
+                    <small>Current Image: <img src="{{ course.image1.url }}" width="100" alt="Image 1" /></small>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Image 1 Description</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="image1_description" value="{{ course.image1_description }}" required />
+
+
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Image 2</label>
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control" name="image2" accept="image/*" />
+                    <small>Current Image: <img src="{{ course.image2.url }}" width="100" alt="Image 2" /></small>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Image 2 Description</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="image2_description" value="{{ course.image2_description }}" required />
+
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Image 3</label>
+                  <div class="col-sm-10">
+                    <input type="file" class="form-control" name="image3" accept="image/*" />
+                    <small>Current Image: <img src="{{ course.image3.url }}" width="100" alt="Image 3" /></small>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label fw-bold">Image 3 Description</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="image3_description" value="{{ course.image3_description }}" required />
+
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary">Update Course</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+  <script src="/static/crm/js/jquery-3.5.1.js"></script>
+  <script src="/static/crm/js/jquery.dataTables.min.js"></script>
+  <script src="/static/crm/js/dataTables.bootstrap5.min.js"></script>
+  <script src="/static/crm/js/script.js"></script>
+
+</body>
+
+</html>

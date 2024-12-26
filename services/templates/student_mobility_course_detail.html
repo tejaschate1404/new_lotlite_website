@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Lotlite - IT solutions & Services || Services Page</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Flaticon -->
+    <link rel="stylesheet" href="/static/css/flaticon.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/static/css/fontawesome-5.14.0.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="/static/css/magnific-popup.min.css">
+    <!-- Nice Select -->
+    <link rel="stylesheet" href="/static/css/nice-select.min.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="/static/css/animate.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" href="/static/css/slick.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <style>
+        .truncate {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* Number of lines to show */
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            max-height: 3.6em;
+            /* Adjust based on font size and line height */
+        }
+        .hero-content-two h1 {
+           margin-left: 40px;
+           text-align: left;
+        }
+        .hero-content-two a {
+           margin-left: 40px;
+           text-align: left;
+        }
+        
+        .hero-content-two spam  {
+           margin-left: 40px;
+           text-align: left;
+        }
+
+        .feature-item {
+    background-color: #f9f9f9; /* Optional background color for visibility */
+    border: 1px solid #ddd; /* Optional border for structure */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add padding inside the box */
+    text-align: center; /* Center content */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.feature-item:hover {
+    background-color: #e8f4ff; /* Light blue background on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.feature-item .icon {
+    font-size: 40px; /* Size of the icon */
+    margin-bottom: 10px; /* Space below the icon */
+    color: #007BFF; /* Icon color */
+}
+
+.feature-item h5 {
+    font-size: 18px;
+    margin: 0;
+    color: #333; /* Text color */
+}
+
+.feature-item h5 a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the h5 color */
+}
+
+.feature-item h5 a:hover {
+    color: #0056b3; /* Slightly darker blue on hover */
+}
+
+/* Inti Univercity css start */
+/* Container Styling */
+.brackets-container {
+    display: flex;
+    justify-content: center; /* Centers the brackets horizontally */
+    gap: 30px; /* Space between brackets */
+    margin: 20px auto; /* Center the container with margin */
+    max-width: 80%; /* Restrict the maximum width */
+}
+
+/* Individual Bracket Styling */
+.bracket {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+    width: 250px; /* Set fixed width for consistency */
+    {% comment %} border: 2px solid #007BFF; /* Add a blue border */ {% endcomment %}
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9; /* Light background */
+}
+
+/* Icon Styling */
+.bracket .icon {
+    font-size: 40px; /* Large icon size */
+    color: #6e08a1; /* Icon color */
+    margin-bottom: 15px; /* Space below the icon */
+}
+
+/* Heading Styling */
+.bracket h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Description Styling */
+.bracket p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.bracket:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    background-color: #e8f4ff; /* Light blue background on hover */
+}
+
+.section-title h3 {
+    padding-left:60px;
+}
+
+/* course discription css */
+ .container {
+            ;
+        }
+        .course-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .description-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+
+
+
+    
+    </style>
+
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="custom-loader"></div>
+        </div>
+
+        <!-- main header -->
+        {% include "header.html" %}
+
+
+        <!--============================  Hero Carousel Start Here ====================================== -->
+        <section class="hero-area-two bgs-cover" style="background-image: url({{course.background_photo.url}});">
+            <div class="container mx-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="hero-content-two pt-155 pb-160 rpt-115 rpb-65 wow fadeInUp delay-0-4s">
+                            <span class="sub-title"> Lotlite Technology</span>
+                            <h1>Students 
+                            <br>
+                            Mobility
+                            <br>
+                            Programme
+                            </h1>
+                            <a href="/about/" class="theme-btn mt-25 wow fadeInUp delay-0-6s">Let’s Get Started <i class="fas fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                  
+                </div>
+                
+            </div>
+       </div>
+      </section>
+   
+
+        <!-- Hero Carousel End Here =================================== -->
+
+        <!--======================= course details start ====================================-->
+
+
+        
+        <section class="project-grid-area rel z-2 py-60 rpy-20 ">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-10">
+                        <div class="section-title text-center mb-50 wow fadeInUp delay-0-2s">
+                            <h2>{{course.title}}</h2>
+                            <p>{{course.title_heading_details}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-md-6">
+                        <div class="project-grid-item wow fadeInUp delay-0-2s">
+                            <div class="image">
+                                <img style="height:200px;" src="{{ course.image1.url }}" alt="Project Grid">
+                                <a class="plus" href="assets/images/projects/project-grid1.jpg"></a>
+                            </div>
+                            <div class="content">
+                                <h4><a href="project-details.html">{{course.image1_description}}</a></h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                   <div class="col-xl-4 col-md-6">
+                        <div class="project-grid-item wow fadeInUp delay-0-4s">
+                            <div class="image">
+                               <img style="height:200px;" src="{{ course.image2.url }}" alt="Project Grid">
+
+                              
+                            </div>
+                            <div class="content">
+                                <h4><a href="project-details.html">{{course.image2_description}}</a></h4>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <div class="project-grid-item wow fadeInUp delay-0-6s">
+                            <div class="image">
+                                <img style="height:200px;" src="{{ course.image3.url }}" alt="Project Grid">
+
+                                
+                            </div>
+                            <div class="content">
+                                <h4><a href="project-details.html">{{course.image3_description}}</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+       
+
+
+        <!--======================= course details end ====================================-->
+        <!--======================= course discription start ====================================-->
+        <div class="container">
+        <!-- Course Title -->
+       
+
+      
+
+        <!-- Course Description -->
+        <div class="description-box">
+            <h4>Course Description</h4>
+            <p>{{ course.description }}</p>
+        </div>
+
+        <!-- Courses Included -->
+        <div class="description-box">
+            <h4>Courses Included</h4>
+            <p>{{ course.courses_included }}</p>
+        </div>
+
+        <!-- Course Contents -->
+        <div class="description-box">
+            <h4>Course Contents</h4>
+            <p>{{ course.course_contents }}</p>
+        </div>
+
+        <div class="description-box">
+            <h4>Other Information</h4>
+            <p><strong>Trainer:</strong> {{ course.course_trainer }}</p>
+            <p><strong>Start Date:</strong> {{ course.start_date }}</p>
+            <p><strong>Duration:</strong> {{ course.duration }}</p>
+            <p><strong>Price:</strong> <i class="fas fa-rupee-sign"></i> {{ course.price }}</p>
+        </div>
+
+
+        
+    </div>
+      
+<!--======================= course discription end ====================================-->
+
+
+       
+
+
+
+
+
+
+        
+
+
+       
+
+
+        <!-- footer area start -->
+        {% include "footer.html" %}
+        <!-- footer area end -->
+
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span
+                class="fas fa-angle-double-up"></span></button>
+
+    </div>
+    <!--End pagewrapper-->
+
+
+    <!-- Jquery -->
+    <script src="/static/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Appear Js -->
+    <script src="/static/js/appear.min.js"></script>
+    <!-- Slick -->
+    <script src="/static/js/slick.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <!-- Nice Select -->
+    <script src="/static/js/jquery.nice-select.min.js"></script>
+    <!-- Image Loader -->
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <!-- Circle Progress -->
+    <script src="/static/js/circle-progress.min.js"></script>
+    <!-- Isotope -->
+    <script src="/static/js/isotope.pkgd.min.js"></script>
+    <!--  WOW Animation -->
+    <script src="/static/js/wow.min.js"></script>
+    <!-- Custom script -->
+    <script src="/static/js/script.js"></script>
+
+    <script>
+ 
+    </script>
+
+</body>
+
+</html>
