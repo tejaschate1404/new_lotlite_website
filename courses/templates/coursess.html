@@ -148,35 +148,7 @@
         <!-- Services Area Five End -->
 
 
-        <!-- Services Area Five Start -->
-        <section class="services-area-five pt-65 rpt-35 pb-30 rpb-10 rel z-2">
-            <div class="container-fluid">
-                <div class="section-title text-center mb-55 wow fadeInUp delay-0-2s">
-                    
-                    <h2>Our Top Services</h2>
-                    <span class="bg-text">Service</span>
-                </div>
-                <div class="services-five-active">
-                    {% for c in courses %}
-                    <div class="service-item-five wow fadeInUp delay-0-2s">
-                        <img height="450" width="470" src="{{c.image.url}}" alt="Services">
-                        <div class="content">
-                            <div class="icon-title">
-                                <div class="icon"><i class="flaticon-coding-1"></i></div>
-                                <h4 ><a href="service-details.html">{{c.title}}</a></h4>
-                            </div>
-                            <div class="bottom-part">
-                                <p>{{c.description|truncatechars:30}}</p>
-                                <a href="service-details.html" class="read-more">Read More <i class="far fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                        <span class="bg-text">Service</span>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </section>
-        <!-- Services Area Five End -->
+       
 
 
         <!-- Services Area Five Start -->
