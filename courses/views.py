@@ -4,4 +4,4 @@ from courses_crm.models import Course
 # Create your views here.
 def courses(request):
     courses=Course.objects.all()
-    return render(request,"coursess.html",{'courses':courses})
+    return render(request,"courses.html",{'courses':courses})
